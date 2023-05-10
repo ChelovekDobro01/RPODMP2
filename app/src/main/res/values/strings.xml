@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">RPODMP</string>
+
+    <plurals name="payback">
+        <item quantity="one">Payback in %d day</item>
+        <item quantity="few">Payback in %d days</item>
+        <item quantity="many">Payback in %d days</item>
+        <item quantity="zero">Payback in %d days</item>
+        <item quantity="other">Payback in %d days</item>
+    </plurals>
+    <string name="title_activity_products">ProductsActivity</string>
+    <string-array name="Categories">
+        <item>Appliances</item>
+        <item>Smartphones, TV</item>
+        <item>Laptops</item>
+        <item>Furniture</item>
+        <item>Pet supplies</item>
+        <item>Books</item>
+    </string-array>
 </resources>

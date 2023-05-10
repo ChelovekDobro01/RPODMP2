@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LR2Activity">
+
+    <Button
+        android:id="@+id/calculateButton"
+        android:layout_width="151dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="44dp"
+        android:text="Calculate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/priceEditText" />
+
+    <TextView
+        android:id="@+id/resultTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="28dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="60dp"
+        android:text="Payback in 3 days"
+        android:textColor="#27732A"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/devicePriceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="Price:"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/deviceSpinner"
+        app:layout_constraintTop_toBottomOf="@+id/deviceSpinner" />
+
+    <TextView
+        android:id="@+id/deviceProfitTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="Profit:"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/devicePriceTextView"
+        app:layout_constraintTop_toBottomOf="@+id/deviceSpinner" />
+
+    <TextView
+        android:id="@+id/deviceEnergyTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="168dp"
+        android:text="Energy consumption:"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/deviceProfitTextView"
+        app:layout_constraintTop_toBottomOf="@+id/deviceSpinner" />
+
+    <TextView
+        android:id="@+id/chooseDeviceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Choose a mining device"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/priceTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/deviceSpinner"
+        android:layout_width="380dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toStartOf="@+id/priceImageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/priceEditText" />
+
+    <EditText
+        android:id="@+id/priceEditText"
+        android:layout_width="104dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="48dp"
+        android:ems="10"
+        android:hint="0.00 $"
+        android:inputType="numberDecimal"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/priceTextView" />
+
+    <ImageView
+        android:id="@+id/priceImageView"
+        android:layout_width="48dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="52dp"
+        android:src="@drawable/baseline_price_change_24"
+        app:layout_constraintEnd_toStartOf="@+id/priceEditText"
+        app:layout_constraintTop_toBottomOf="@+id/priceTextView"
+        app:srcCompat="@drawable/baseline_price_change_24" />
+
+    <TextView
+        android:id="@+id/priceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="52dp"
+        android:text="Enter electricity price"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
