@@ -66,8 +66,8 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
         }
 
         public void bind(Product product) {
-            _nameTextView.setText(product.get_name());
-            _priceTextView.setText(product.get_price() + "$");
+            _nameTextView.setText(product.name.get());
+            _priceTextView.setText(product.price.get() + "$");
         }
     }
 }

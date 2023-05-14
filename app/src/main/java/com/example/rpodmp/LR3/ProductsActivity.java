@@ -20,6 +20,7 @@ public class ProductsActivity extends AppCompatActivity {
     private ProductsActivity instance;
     private RecyclerView _recyclerView;
     private Button _addButton;
+    private Button _clearButton;
     private  ProductAdapter _productAdapter;
 
     @Override
@@ -40,16 +41,17 @@ public class ProductsActivity extends AppCompatActivity {
         loadProducts();
 
         _addButton = findViewById(R.id.newProductButton);
-        View.OnClickListener clickListener = new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(instance, NewProductFirstStep.class);
-                Product newProduct = new Product();
-                intent.putExtra(newProduct.getClass().getSimpleName(), newProduct);
-                startActivity(intent);
-            }
+        _clearButton = findViewById(R.id.clearProductsButton);
+        View.OnClickListener addClickListener = v -> {
+            Intent intent = new Intent(instance, NewProductFirstStep.class);
+            Product newProduct = new Product("Test4", 10.00);
+            intent.putExtra(Product.class.getSimpleName(), newProduct);
+            startActivity(intent);
         };
-        _addButton.setOnClickListener(clickListener);
+        _addButton.setOnClickListener(addClickListener);
+
+        View.OnClickListener clearClickListener = v -> _productAdapter.clearItems();
+        _clearButton.setOnClickListener(clearClickListener);
     }
 
     private void loadProducts() {
