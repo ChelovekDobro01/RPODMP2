@@ -31,6 +31,11 @@ public class ProductsActivity extends AppCompatActivity {
         initializeRecyclerView();
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+    }
+
     private void initializeRecyclerView() {
         _recyclerView = findViewById(R.id.productsRecyclerView);
         _recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -44,7 +49,7 @@ public class ProductsActivity extends AppCompatActivity {
         _clearButton = findViewById(R.id.clearProductsButton);
         View.OnClickListener addClickListener = v -> {
             Intent intent = new Intent(instance, NewProductFirstStep.class);
-            Product newProduct = new Product("Test4", 10.00);
+            Product newProduct = new Product();
             intent.putExtra(Product.class.getSimpleName(), newProduct);
             startActivity(intent);
         };

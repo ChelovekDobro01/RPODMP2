@@ -12,25 +12,25 @@ import com.example.rpodmp.R;
 import com.example.rpodmp.databinding.ActivityNewProductFirstStepBinding;
 import com.example.rpodmp.entities.Product;
 
-public class NewProductFirstStep extends AppCompatActivity {
+public class NewProductThirdStep extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_new_product_first_step);
+        setContentView(R.layout.activity_new_product_third_step);
 
-        NewProductFirstStep instance = this;
+        NewProductThirdStep instance = this;
         Bundle arguments = getIntent().getExtras();
-        ActivityNewProductFirstStepBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_new_product_first_step);
+        ActivityNewProductFirstStepBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_new_product_second_step);
         Product product = (Product)arguments.getSerializable(Product.class.getSimpleName());
         binding.setProduct(product);
 
-        Button nextButton = findViewById(R.id.productNextButton1);
+        Button saveButton = findViewById(R.id.productSaveButton);
         View.OnClickListener onClickListener = v -> {
-            Intent intent = new Intent(instance, NewProductSecondStep.class);
-            intent.putExtra(Product.class.getSimpleName(), product);
+            Intent intent = new Intent(instance, ProductsActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
             startActivity(intent);
         };
-        nextButton.setOnClickListener(onClickListener);
+        saveButton.setOnClickListener(onClickListener);
     }
 }

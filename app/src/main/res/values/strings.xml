@@ -17,4 +17,11 @@
         <item>Pet supplies</item>
         <item>Books</item>
     </string-array>
+
+    <string-array name="Providers">
+        <item>Ozon</item>
+        <item>Wildberries</item>
+        <item>AliExpress</item>
+        <item>Alibaba</item>
+    </string-array>
 </resources>
