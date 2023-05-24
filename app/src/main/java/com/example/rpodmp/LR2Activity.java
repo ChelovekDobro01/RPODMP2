@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.Activity;
 import android.content.res.Resources;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -35,6 +36,8 @@ public class LR2Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lr2);
+
+        getSupportActionBar().hide();
 
         TextView devicePriceTextView = findViewById(R.id.devicePriceTextView);
         TextView deviceProfitTextView = findViewById(R.id.deviceProfitTextView);

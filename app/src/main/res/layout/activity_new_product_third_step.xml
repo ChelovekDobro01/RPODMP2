@@ -31,12 +31,11 @@
             android:layout_height="43dp"
             android:layout_marginTop="40dp"
             android:entries="@array/Providers"
+            android:selectedItemPosition="@={product.provider}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.516"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/chooseProviderTextView"
-            app:selectedValue="@={product.provider}"
-            app:spinnerEntries="@{@stringArray/Providers}" />
+            app:layout_constraintTop_toBottomOf="@+id/chooseProviderTextView" />
 
         <TextView
             android:id="@+id/chooseProviderTextView"
@@ -65,7 +64,7 @@
             android:layout_marginTop="28dp"
             android:ems="10"
             android:inputType="number|numberSigned"
-            android:value="@={product.count}"
+            android:text="@={`` + product.count}"
             app:layout_constraintStart_toStartOf="@+id/chooseProviderTextView"
             app:layout_constraintTop_toBottomOf="@+id/productCountTextView" />
     </androidx.constraintlayout.widget.ConstraintLayout>

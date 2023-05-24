@@ -10,6 +10,7 @@ import android.widget.Button;
 
 import com.example.rpodmp.R;
 import com.example.rpodmp.databinding.ActivityNewProductFirstStepBinding;
+import com.example.rpodmp.databinding.ActivityNewProductThirdStepBinding;
 import com.example.rpodmp.entities.Product;
 
 public class NewProductThirdStep extends AppCompatActivity {
@@ -21,7 +22,7 @@ public class NewProductThirdStep extends AppCompatActivity {
 
         NewProductThirdStep instance = this;
         Bundle arguments = getIntent().getExtras();
-        ActivityNewProductFirstStepBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_new_product_second_step);
+        ActivityNewProductThirdStepBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_new_product_third_step);
         Product product = (Product)arguments.getSerializable(Product.class.getSimpleName());
         binding.setProduct(product);
 
@@ -29,6 +30,7 @@ public class NewProductThirdStep extends AppCompatActivity {
         View.OnClickListener onClickListener = v -> {
             Intent intent = new Intent(instance, ProductsActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+            intent.putExtra("newProduct", product);
             startActivity(intent);
         };
         saveButton.setOnClickListener(onClickListener);

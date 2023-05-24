@@ -1,6 +1,4 @@
 <resources>
-    <string name="app_name">RPODMP</string>
-
     <plurals name="payback">
         <item quantity="one">Payback in %d day</item>
         <item quantity="few">Payback in %d days</item>
@@ -24,4 +22,13 @@
         <item>AliExpress</item>
         <item>Alibaba</item>
     </string-array>
+    <string-array name="Recipes">
+        <item>Soup</item>
+        <item>Dessert</item>
+        <item>Salad</item>
+        <item>Bakery</item>
+        <item>Alcoholic drinks</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

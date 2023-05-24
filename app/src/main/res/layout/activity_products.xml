@@ -7,17 +7,26 @@
     tools:context=".LR3.ProductsActivity">
 
     <Button
+        android:id="@+id/saveProductsButton"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="128dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="8dp"
+        android:background="#FFFFFF"
+        android:text="Save"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/newProductButton" />
+
+    <Button
         android:id="@+id/clearProductsButton"
         style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_width="410dp"
-        android:layout_height="81dp"
-        android:layout_marginBottom="7dp"
+        android:layout_width="128dp"
+        android:layout_height="69dp"
         android:background="#FFFFFF"
-        android:text="X Clear Products"
-        app:layout_constraintBottom_toTopOf="@+id/newProductButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:text="Clear"
+        app:layout_constraintEnd_toStartOf="@+id/newProductButton"
+        app:layout_constraintStart_toEndOf="@+id/saveProductsButton"
+        app:layout_constraintTop_toTopOf="@+id/newProductButton" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/productsRecyclerView"
@@ -31,11 +40,12 @@
     <Button
         android:id="@+id/newProductButton"
         style="@style/Widget.AppCompat.Button"
-        android:layout_width="410dp"
-        android:layout_height="81dp"
-        android:text="+ New Product"
+        android:layout_width="128dp"
+        android:layout_height="69dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="#FFFFFF"
+        android:text="New"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,4 +1,4 @@
-package com.example.rpodmp.LR3;
+package com.example.rpodmp.adapters;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,6 +15,8 @@ import java.util.Collection;
 import java.util.List;
 
 public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductViewHolder> {
+
+    public View.OnClickListener itemOnClickListener;
 
     private List<Product> productList = new ArrayList<>();
 
@@ -36,6 +38,10 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
     public void clearItems() {
         productList.clear();
         notifyDataSetChanged();
+    }
+
+    public List<Product> getItems() {
+        return  productList;
     }
 
     @Override
@@ -63,11 +69,12 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
             super(itemView);
             _nameTextView = itemView.findViewById(R.id.productNameTextView);
             _priceTextView = itemView.findViewById(R.id.productPriceTextView);
+            itemView.setOnClickListener(itemOnClickListener);
         }
 
         public void bind(Product product) {
-            _nameTextView.setText(product.name.get());
-            _priceTextView.setText(product.price.get() + "$");
+            _nameTextView.setText(product.getName());
+            _priceTextView.setText(product.getPrice() + "$");
         }
     }
 }

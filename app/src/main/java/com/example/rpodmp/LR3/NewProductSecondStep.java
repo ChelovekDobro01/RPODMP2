@@ -22,7 +22,7 @@ public class NewProductSecondStep extends AppCompatActivity {
 
         NewProductSecondStep instance = this;
         Bundle arguments = getIntent().getExtras();
-        ActivityNewProductFirstStepBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_new_product_second_step);
+        ActivityNewProductSecondStepBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_new_product_second_step);
         Product product = (Product)arguments.getSerializable(Product.class.getSimpleName());
         binding.setProduct(product);
 
